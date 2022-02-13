@@ -1,0 +1,101 @@
+import java.awt.*;
+import java.awt.event.*;
+class awtregform 
+{
+public static void main(String args[])
+{
+Frame f = new Frame("Registration Form");
+final Label l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12;
+final TextField tf1,tf2,tf3,tf4;
+final Choice c,c1,c2,c3;
+l1 = new Label("Name : ");
+l1.setBounds(60,50,40,20);
+f.add(l1);
+tf1 = new TextField(10);
+f.add(tf1);
+tf1.setBounds(160,50,130,20);
+l2 = new Label("ID : ");
+l2.setBounds(60,80,40,20);
+f.add(l2);
+tf2 = new TextField(2);
+tf2.setBounds(160,80,130,20);
+f.add(tf2);
+l3 = new Label("Mob No.:");
+l3.setBounds(60,110,60,20);
+f.add(l3);
+tf3 = new TextField(10);
+tf3.setBounds(160,110,130,20);
+f.add(tf3);
+l4 = new Label("Address : ");
+l4.setBounds(60,140,90,20);
+f.add(l4);
+TextArea ta = new TextArea(5,10);
+ta.setBounds(160,140,130,80);
+f.add(ta);
+l5 = new Label("Dept :");
+l5.setBounds(60,240,60,20);
+f.add(l5);
+List li1 = new List(5,true);
+li1.add("CST");
+li1.add("MECH");
+li1.add("IT");
+li1.add("CIVIL");
+li1.add("E&TC");
+li1.setBounds(160,240,130,80);
+f.add(li1);
+l6 = new Label("Designation :");
+l6.setBounds(60,340,90,20);
+f.add(l6);
+c = new Choice();
+c.add("Student");
+c.add("Teacher");
+c.add("HOD");
+c.setBounds(160,340,130,80);
+f.add(c);
+l7 = new Label("Date Of Birth :");
+l7.setBounds(60,370,90,20);
+f.add(l7);
+l8 = new Label("Day");
+l8.setBounds(160,370,30,20);
+f.add(l8);
+c1 = new Choice();
+c1.setBounds(210,370,40,20);
+c1.add("14");
+f.add(c1);
+l9 = new Label("Month ");
+l9.setBounds(260,370,40,20);
+f.add(l9);
+c2 = new Choice();
+c2.add("01");
+c2.setBounds(310,370,40,20);
+f.add(c2);
+l10 = new Label("year");
+l10.setBounds(360,370,40,20);
+f.add(l10);
+c3 = new Choice();
+c3.add("2022");
+c3.setBounds(400,370,60,20);
+f.add(c3);
+l11 = new Label("Password:");
+l11.setBounds(60,400,90,20);
+f.add(l11);
+tf4 = new TextField(5);
+tf4.setBounds(160,400,130,20);
+f.add(tf4);
+tf4.setEchoChar('*');
+Button b1 = new Button("SUBMIT");
+b1.setBounds(140,450,100,40);
+f.add(b1);
+l12 = new Label("");
+l12.setBounds(100,510,200,20);
+f.add(l12);
+b1.addActionListener(new ActionListener(){
+public void actionPerformed(ActionEvent e){
+l12.setText("Data Submitted Successfully!!!");
+}
+});
+f.setLayout(null);
+f.setVisible(true);
+f.setSize(800,800);
+}
+}
